@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>University Management - Dashboard</title>
+  </head>
+  <body>
+    <div class="app-root">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-root">
+          <!-- Brand Section -->
+          <div class="brand">
+            <img class="brand-logo" src="assets/logo.svg" alt="PDEU Logo" />
+            <div class="brand-title">PDEU</div>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="menu">
+            <a class="menu-item active" href="#" data-page="dashboard">
+              <img src="assets/graph-1.svg" alt="Dashboard" />
+              <span>Dashboard</span>
+            </a>
+            <a class="menu-item" href="#" data-page="students-grade">
+              <img src="assets/menu-students.svg" alt="Students" />
+              <span>Students Grade</span>
+            </a>
+            <a class="menu-item" href="#" data-page="attendance">
+              <img src="assets/icon-shopping-cart.svg" alt="Attendance" />
+              <span>Attendance</span>
+            </a>
+            <a class="menu-item" href="#" data-page="student-data">
+              <img src="assets/icon-shopping-outline.svg" alt="Student Data" />
+              <span>Student Data</span>
+            </a>
+            <a class="menu-item" href="#" data-page="messages">
+              <img src="assets/icon-message-outline.svg" alt="Messages" />
+              <span>Messages</span>
+            </a>
+          </nav>
+
+          <!-- Sign Out -->
+          <div class="signout">
+            <img src="assets/icon-signout.svg" alt="Sign Out" />
+            <span>Sign Out</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main">
+        <!-- Top Bar -->
+        <div class="topbar-root">
+          <div class="topbar-left">
+            <div class="search">
+              <img src="assets/icon-search.svg" alt="Search" />
+              <input type="text" placeholder="Search here..." id="searchInput" />
+            </div>
+          </div>
+          <!-- <div class="topbar-right">
+            <div class="language">
+              <img src="assets/flag-us.svg" alt="US" />
+              <span>Eng (US)</span>
+              <img class="chevron" src="assets/chevron-down.svg" alt="▼" />
+            </div>
+            <div class="bell-container">
+              <img class="bell" src="assets/icon-bell.svg" alt="Notifications" />
+              <span class="notification-badge"></span>
+            </div>
+            <div class="profile">
+              <div class="avatar"></div>
+              <div class="profile-texts">
+                <div class="role">Professor</div>
+                <div class="name">Admin</div>
+              </div>
+              <img class="ellipsis" src="assets/icon-ellipsis.svg" alt="more" />
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-root" id="dashboard-content">
+          <div class="page-header">
+            <h1 class="page-title">Dashboard</h1>
+            <div class="toolbar">
+              <input type="text" id="professorId" placeholder="Enter Professor ID" class="select" style="width: 200px;" />
+              <button class="button" id="loadCoursesBtn">Load Courses</button>
+            </div>
+          </div>
+          <div class="cards" id="coursesCards">
+            <!-- Cards will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Students Grade Page -->
+        <div class="dashboard-root" id="students-grade-content" style="display: none;">
+          <h1 class="page-title">Students Grade</h1>
+          <div class="toolbar">
+            <select id="gradeCourseSelect" class="select">
+              <option value="">Select Course</option>
+            </select>
+            <button class="button" id="loadStudentsForGradeBtn">Load Students</button>
+          </div>
+          <div id="gradesTableContainer"></div>
+        </div>
+
+        <!-- Attendance Page -->
+        <div class="dashboard-root" id="attendance-content" style="display: none;">
+          <h1 class="page-title">Mark Attendance</h1>
+          <div class="toolbar">
+            <select id="attendanceCourseSelect" class="select">
+              <option value="">Select Course</option>
+            </select>
+            <button class="button" id="loadStudentsForAttendanceBtn">Load Students</button>
+          </div>
+          <div id="attendanceTableContainer"></div>
+        </div>
+
+        <!-- Student Data Page -->
+        <div class="dashboard-root" id="student-data-content" style="display: none;">
+          <h1 class="page-title">Student Data</h1>
+          <div class="toolbar">
+            <input type="text" id="searchStudentInput" placeholder="Search Student ID" class="select" />
+            <button class="button" id="searchStudentBtn">Search</button>
+          </div>
+          <div class="toolbar" style="margin-top: 16px;">
+            <select id="studentDataCourseSelect" class="select">
+              <option value="">Select Course</option>
+            </select>
+            <button class="button" id="loadStudentDataBtn">Load Students</button>
+          </div>
+          <div class="toolbar" style="margin-top: 16px;">
+            <input type="text" id="newStudentId" placeholder="Student ID" class="select" readonly />
+            <input type="text" id="newFirstName" placeholder="First Name" class="select" />
+            <input type="text" id="newLastName" placeholder="Last Name" class="select" />
+            <input type="email" id="newEmail" placeholder="Email" class="select" />
+            <button class="button" id="updateStudentBtn">Update</button>
+          </div>
+          <div id="studentDataTableContainer"></div>
+        </div>
+
+        <!-- Messages Page -->
+        <div class="dashboard-root" id="messages-content" style="display: none;">
+          <h1 class="page-title">Messages</h1>
+          <p>Messages functionality coming soon...</p>
+        </div>
+      </main>
+    </div>
+    <script src="professorAPI.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
