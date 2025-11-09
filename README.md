@@ -4,17 +4,17 @@ A full-stack **Node.js + MySQL** project for managing students, professors, cour
 
 ---
 
-## 🚀 Features
-- 👨‍🎓 Student, Professor & Course **CRUD**
-- 🗓 Attendance tracking with % calculation
-- 📧 **Auto email alert** for students below 80% attendance (via Nodemailer)
-- 🧮 Grade management (mid-sem, internal, end-sem)
-- ⚙️ Auto student enrollment using SQL trigger
-- 💬 Student query & notification system
+## Features
+- Student, Professor & Course **CRUD**
+- Attendance tracking with % calculation
+- **Auto email alert** for students below 80% attendance (via Nodemailer)
+- Grade management (mid-sem, internal, end-sem)
+- Auto student enrollment using SQL trigger
+- Student query & notification system
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 **Backend:** Node.js, Express  
 **Database:** MySQL  
 **Email Service:** Nodemailer  
@@ -24,7 +24,7 @@ A full-stack **Node.js + MySQL** project for managing students, professors, cour
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 git clone https://github.com/your-username/university-management.git
 cd university-management
