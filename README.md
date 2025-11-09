@@ -30,7 +30,7 @@ git clone https://github.com/your-username/university-management.git
 cd university-management
 npm install
 
-## add a .env file
+## Add a .env file
 
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_app_password
