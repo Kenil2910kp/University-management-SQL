@@ -20,7 +20,7 @@ A full-stack **Node.js + MySQL** project for managing students, professors, cour
 **Email Service:** Nodemailer  
 **Frontend (Current):** HTML, CSS, JavaScript  
 **Frontend (Next Update):** React.js (planned migration)  
-**Testing:** Postman / Thunder Client  
+**Testing:** Postman 
 
 ---
 
