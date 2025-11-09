@@ -25,6 +25,8 @@ router.get("/getAttendance/:course_id", professorController.getAttendance);
 
 router.get("/getAttendanceByStudent/:student_id/:course_id", professorController.getAttendanceByStudentCourse);
 
+router.get("/studentsData/:course_id",professorController.getStudentsData);
+
 // router.post("/insertGrades",professorController.insertGrades);
 
 // Update grades
