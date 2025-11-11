@@ -19,10 +19,15 @@ A full-stack **Node.js + MySQL** project for managing students, professors, cour
 **Database:** MySQL  
 **Email Service:** Nodemailer  
 **Frontend (Current):** HTML, CSS, JavaScript  
-**Frontend (Next Update):** React.js (planned migration)  
 **Testing:** Postman 
 
 ---
+
+## Future Scope
+
+- A Student-side portal will also be added soon — where students can log in, view attendance, grades, and receive alerts directly.
+- React-based frontend for both student and professor dashboards.
+- Analytics and visual insights for performance tracking.
 
 ## Setup
 
