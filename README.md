@@ -58,7 +58,6 @@ create a schema of name **University_Management2**  And run the below code
 USE University_Management2;
 
 
--- Admin login table
 CREATE TABLE Admins (
     admin_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
@@ -102,7 +101,7 @@ CREATE TABLE Enrollments (
     enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
     student_id INT,
     course_id INT,
-	Division INT,
+	Division varchar(5),
     FOREIGN KEY (student_id) REFERENCES Students(student_id),
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
@@ -182,10 +181,10 @@ INSERT INTO Courses (name, credits, professor_id, department, division) VALUES
 ('Thermodynamics', 4, 4, 'ME', 'A');
 
 INSERT INTO Enrollments (student_id, course_id, Division) VALUES
-(1, 1, '1', 'A'),
-(2, 2, '2', 'B'),
-(3, 3, '3', 'A'),
-(4, 3, '4', 'A')
+(1, '1', 'A'),
+(2, '2', 'B'),
+(3, '3', 'A'),
+(3, '4', 'A')
 ;
 
 
@@ -200,7 +199,7 @@ INSERT INTO Grades (student_id, course_id, mid_sem, internal, end_sem) VALUES
 (2, 2, 20, 15, 35),
 (3, 3, 22, 17, 38);
 
-# for auto enroll a student according to all subjects for the department he have register 
+# #for auto enroll a student according to all subjects for the department he have register 
 
 DELIMITER //
 
@@ -217,4 +216,7 @@ END //
 
  DELIMITER ;
  
+ 
+
+
 
